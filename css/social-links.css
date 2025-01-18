@@ -1,0 +1,117 @@
+/* Social Links Container */
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Individual Social Links */
+.social-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White icon color */
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* For ripple effect */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    transform: scale(0); /* Initial state for animation */
+    opacity: 0;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer ;
+}
+
+/* Font Awesome Icons */
+.social-links i {
+    font-size: 24px;
+}
+
+/* Hover Effect */
+.social-links a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite; /* Pulse Effect */
+}
+
+/* Gradient Hover Effect */
+.social-links .github:hover {
+    background: linear-gradient(135deg, #6e5494, #333);
+}
+
+.social-links .twitter:hover {
+    background: linear-gradient(135deg, #333, #333);
+}
+
+.social-links .linkedin:hover {
+    background: linear-gradient(135deg, #0077b5, #003b63);
+}
+
+/* Tooltip Styling */
+.social-links a::after {
+    content: attr(aria-label); /* Tooltip content */
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    transform: translateY(10px);
+}
+
+.social-links a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Click Animation */
+.social-links a:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .social-links {
+        flex-direction: row; /* Keep the links horizontal */
+        gap: 10px; /* Adjust spacing between links for smaller screens */
+        justify-content: center; /* Center align the links */
+        flex-wrap: wrap; /* Allow wrapping if the links exceed screen width */
+    }
+
+    .social-links a {
+        width: 50px; /* Adjust size for smaller screens */
+        height: 50px;
+    }
+
+    .social-links i {
+        font-size: 20px; /* Reduce icon size for smaller screens */
+    }
+}

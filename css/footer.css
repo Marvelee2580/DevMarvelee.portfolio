@@ -1,0 +1,46 @@
+/* Footer Styling */
+#portfolio-footer {
+    background-color: #000; /* Natural dark background */
+    color: #fff; /* Contrast text */
+    padding: 2rem 0;
+    text-align: center;
+    font-family: "Parkinsans", sans-serif;
+}
+
+#portfolio-footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#portfolio-footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #FFD700; /* Accent color */
+}
+
+#portfolio-footer p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color: #e9e9e9;
+}
+
+#portfolio-footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#portfolio-footer a:hover {
+    color: #FFF; /* Interactive color on hover */
+}
+
+#heart {
+    animation: beat 1.5s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}

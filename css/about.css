@@ -1,0 +1,112 @@
+/* About Section Styling */
+#about {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Parkinsans", sans-serif;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.highlight {
+    color: #FFD700; /* Accent color */
+    font-weight: bold;
+}
+
+.about-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-btn i {
+    margin-right: 8px;
+}
+
+.about-btn:hover {
+    background-color: #FFD700;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+#quote-btn {
+    background-color: #666;
+    color: #fff;
+}
+
+.dynamic-display {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.skills-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.skills-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.skills-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-container li {
+    padding: 8px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.quote-container {
+    font-size: 1.2rem;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
