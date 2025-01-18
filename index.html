@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Dev Marvelee's Portfolio - Frontend Developer and Creative Problem Solver."
+        />
+        <title>Portfolio - Dev Marvelee</title>
+
+        <!-- Font Imports -->
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300;500;700&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+        </style>
+        <!-- AOS CSS -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+            rel="stylesheet"
+        />
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/hamburger.css" />
+        <link rel="stylesheet" href="css/social-links.css" />
+        <link rel="stylesheet" href="css/typing-effect.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+        <link rel="stylesheet" href="css/about.css" />
+
+        <!-- Font Awesome -->
+        <script
+            src="https://kit.fontawesome.com/ea4bc78125.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <nav class="nav" aria-label="Main Navigation">
+                <div class="backdrop" id="backdrop"></div>
+                <div id="location_time">
+                    <div id="location">Lagos, Nigeria</div>
+                    <div id="time-display"></div>
+                </div>
+                <div class="hamburger" id="hamburger" aria-label="Menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Services</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="myself">
+                    <img
+                        src="img/mrv.jpg"
+                        alt="Dev Marvelee's Profile Picture"
+                    />
+                </div>
+                <div class="whoIam">
+                    <h1 id="heroTitle">
+                        <span id="dynamicMessage">Hi, I'm Dev Marvelee</span>
+                    </h1>
+
+                    <h3 id="heroSubtitle">
+                        Frontend Developer | Creative Problem Solver
+                    </h3>
+                </div>
+                <div class="whatIdo">
+                    <h3 id="heroLocation">
+                        A Website Developer working remotely from Lagos,
+                        Nigeria.
+                    </h3>
+                    <p id="heroDescription">
+                        Passionate about creating great and memorable user
+                        experiences!
+                    </p>
+                </div>
+                <div class="cta-buttons">
+                    <button class="contactbtn" id="contact-btn">
+                        <i class="fas fa-phone-alt"></i> Hire Me
+                    </button>
+                    <button class="portfoliobtn" id="portfolio-btn">
+                        <i class="fas fa-briefcase"></i> View My Work
+                    </button>
+                </div>
+                <aside class="social-links">
+                    <a
+                        href="https://github.com/Marvelee2580"
+                        target="_blank"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                        href="https://x.com/DevMarvelee"
+                        target="_blank"
+                        aria-label="X (formerly Twitter)"
+                    >
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/oluwasegun-olatunji-9b1082322"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </aside>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <h2>About Me</h2>
+                <p>
+                    Hey there! I’m <span class="highlight">Dev Marvelee</span>,
+                    a web developer who loves bringing ideas to life through
+                    clean and creative designs. I enjoy solving problems,
+                    building cool projects, and making the web a better place
+                    for everyone.
+                </p>
+                <p>
+                    My approach? Keep things simple but powerful. Whether it’s
+                    designing a website or coding a feature, I focus on making
+                    sure everything looks great and works perfectly.
+                </p>
+                <div class="about-extras">
+                    <button id="quote-btn" class="about-btn">
+                        <i class="fas fa-lightbulb"></i> Need Some Motivation?
+                    </button>
+                </div>
+                <div id="dynamic-display" class="dynamic-display">
+                    <div id="skills-container" class="skills-container">
+                        <h3><i class="fas fa-code"></i> My Skills</h3>
+                        <ul id="skills-list"></ul>
+                    </div>
+                    <div
+                        id="quote-container"
+                        class="quote-container hidden"
+                    ></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="container">
+                <!-- Portfolio projects -->
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="portfolio-footer">
+            <div class="container">
+                <h4>Interested in working with me?</h4>
+                <p>
+                    Let's turn your ideas into reality. Feel free to
+                    <a href="mailto:olatunjisegunwinners@gmail.com"
+                        >reach out</a
+                    >
+                    for projects, collaborations, or consultations.
+                </p>
+                <p class="footer-note">
+                    I believe in creating solutions that not only work but
+                    inspire.
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2024 Dev Marvelee. Designed with
+                    <span id="heart">❤️</span> by <strong>Dev Marvelee</strong>.
+                </p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <!-- AOS JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="js/main.js"></script>
+        <script src="js/hamburger.js"></script>
+        <script src="js/social-links.js"></script>
+        <script src="js/typing-effect.js"></script>
+        <script src="js/about.js"></script>
+    </body>
+</html>
