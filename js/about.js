@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const quoteBtn = document.getElementById("quote-btn");
-    const skillsList = document.getElementById("skills-list");
-    const quoteContainer = document.getElementById("quote-container");
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteBtn = document.getElementById('quote-btn');
+    const skillsList = document.getElementById('skills-list');
+    const quoteContainer = document.getElementById('quote-container');
 
     // Predefined skills
     const skills = [
         "HTML5, CSS3, JavaScript (ES6+)",
-        "React, Vue.js, Angular",
-        "Node.js, Express",
+        "Tailwind CSS",
+        "TypeScript, React",
         "MongoDB, SQL",
         "Responsive Design, UX/UI",
         "Git, GitHub, CI/CD"
@@ -23,15 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     // Load skills into the container
-    skillsList.innerHTML = skills
-        .map(skill => `<li><i class="fas fa-check"></i> ${skill}</li>`)
-        .join("");
+    skillsList.innerHTML = skills.map(skill => `<li><i class="fas fa-check"></i> ${skill}</li>`).join('');
 
     // Event listener for Quotes button
-    quoteBtn.addEventListener("click", () => {
+    quoteBtn.addEventListener('click', () => {
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         quoteContainer.innerHTML = `<p>${randomQuote}</p>`;
-        quoteContainer.classList.remove("hidden");
-        quoteContainer.classList.add("fadeIn");
+        quoteContainer.classList.remove('hidden');
+        quoteContainer.classList.add('fadeIn');
     });
 });
