@@ -21,14 +21,14 @@ setInterval(updateTime, 1000);
 // Initialize time immediately when the script loads
 updateTime();
 
-// Sophisticated Footer Features
 
-// 1. Dynamic Year Update
+
+// Dynamic Year Update
 const yearElement = document.querySelector(".footer-copyright");
 const currentYear = new Date().getFullYear();
 yearElement.innerHTML = `&copy; ${currentYear} Dev Marvelee. Designed with <span id="heart">❤️</span> by <strong>Dev Marvelee</strong>.`;
 
-// 2. Subtle Heart Interaction
+//  Subtle Heart Interaction
 const heart = document.getElementById("heart");
 heart.addEventListener("mouseenter", () => {
     heart.style.color = "#FF5733"; // Vibrant color on hover
@@ -39,28 +39,8 @@ heart.addEventListener("mouseleave", () => {
     heart.style.transform = "scale(1)";
 });
 
-// 3. Smooth Scroll to Contact Section (if available)
-document.querySelectorAll("a[href^='mailto:']").forEach((link) => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent default email client opening
-        const contactSection = document.getElementById("contact"); // Assuming a contact section exists
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
-            highlightSection(contactSection);
-        } else {
-            window.location.href = link.getAttribute("href");
-        }
-    });
-});
 
-// 4. Highlight Contact Section on Scroll
-function highlightSection(section) {
-    section.style.transition = "background-color 0.3s ease";
-    section.style.backgroundColor = "#FFD700"; // Highlight color
-    setTimeout(() => (section.style.backgroundColor = ""), 1500); // Revert color after 1.5s
-}
-
-// 5. Inspiring Message Animation
+// Inspiring Message Animation
 const footerNote = document.querySelector(".footer-note");
 let messageIndex = 0;
 const messages = [
@@ -74,3 +54,22 @@ function changeFooterMessage() {
     messageIndex = (messageIndex + 1) % messages.length;
 }
 setInterval(changeFooterMessage, 5000); // Rotate message every 5 seconds
+
+// Resume view
+document.getElementById('portfolio-btn').addEventListener('click', function() {
+    document.getElementById('resume-viewer').classList.add('show');
+});
+
+document.getElementById('close-resume-btn').addEventListener('click', closeResume);
+document.getElementById('resume-backdrop').addEventListener('click', closeResume);
+
+function closeResume() {
+    document.getElementById('resume-viewer').classList.remove('show');
+}
+
+// Close on Escape key press
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeResume();
+    }
+});
